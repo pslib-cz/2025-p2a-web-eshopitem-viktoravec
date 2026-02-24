@@ -1,1 +1,1 @@
-Live stránka: [Klik sem]()
+Live stránka: [Klik sem](https://pslib-cz.github.io/2025-p2a-web-eshopitem-viktoravec/)
