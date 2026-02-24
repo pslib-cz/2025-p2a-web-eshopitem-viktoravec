@@ -1,71 +1,152 @@
+@layer reset, base, components;
 
-body {
-    font-family: "Inter", sans-serif;
-    background-color: #F5F5F5;
-    background-image: linear-gradient(to right, #E6E6E6 1px, transparent 1px), linear-gradient(to bottom, #E6E6E6 1px, transparent 1px);
-    background-size: 122px 122px;
-    background-position: 0 -215px;
+@layer reset {
+    :root {
+        --grey: #A3A3A3;
+        --green: #7EE24D;
+        --darkGreen: #6ebe46;
+        --white: #ffff;
+        --red: #dc3545;
+    }
 }
 
-.header {
-    padding: 3em 2em;
+@layer base {
+    body {
+        font-family: "Inter", sans-serif;
+        background-color: #F5F5F5;
+        background-image: linear-gradient(to right, #E6E6E6 1px, transparent 1px), linear-gradient(to bottom, #E6E6E6 1px, transparent 1px);
+        background-size: 122px 122px;
+        background-position: 0 -215px;
+    }
 }
 
-.header__path {
-    display: block;
-    padding: 1rem 0 5rem 0;
-}
+@layer components {
+    .header {
+        padding: 3em 2em;
+    }
 
-.header__path__ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    color: #A3A3A3;
-}
+    .header__path {
+        display: block;
+        padding: 1rem 0 4rem 0;
+    }
 
-.header__path__ul li + li::before {
-    content: "/";
-    margin: 0 10px;
-    text-decoration: none;
-    color: #A3A3A3;
-}
+    .header__path__ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        color: var(--grey);
+    }
 
-.header__path__ul li:last-child a {
-    text-decoration: none;
-    color: #A3A3A3;
-}
+    .header__path__ul li + li::before {
+        content: "/";
+        margin: 0 10px;
+        text-decoration: none;
+        color: var(--grey);
+    }
 
-.header__path__ul li:not(:last-child) a {
-    text-decoration: underline;
-    color: #A3A3A3;
-}
+    .header__path__ul li:last-child a {
+        text-decoration: none;
+        color: var(--grey);
+    }
 
-.header__material {
-    margin: 1em 0 0 0;
-    font-size: 1.5rem;
-    font-weight: 550;
-}
+    .header__path__ul li:not(:last-child) a {
+        text-decoration: underline;
+        color: var(--grey);
+    }
 
-.header__filters {
-    display: flex;
-    justify-self: center;
-    text-align: center;
-    background-color: #7EE24D;
-    padding: 0.1rem 4rem;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    font-weight: 750;
-    align-items: center;
-}
+    .header__material {
+        margin: 1em 0 0 0;
+        font-size: 2rem;
+        font-weight: 550;
+    }
 
-.header__filters:hover{
-    background-color: #6ebe46;
-}
+    .header__filters {
+        display: flex;
+        justify-self: center;
+        text-align: center;
+        background-color: var(--green);
+        padding: 0 5rem;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        font-weight: 750;
+        align-items: center;
+    }
 
-.header__filters__arrow {
-    padding-left: 0.5em;
-    width: 0.75rem;
-    height: 0.75rem;
-    vertical-align: middle;
+    .header__filters:hover{
+        background-color: var(--darkGreen);
+    }
+
+    .header__filters__arrow {
+        padding-left: 0.5em;
+        width: 0.75rem;
+        height: 0.75rem;
+        vertical-align: middle;
+    }
+
+
+    .main__products {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.6rem;
+        padding: 1rem;
+        grid-template-rows: auto;
+    }
+
+    .main__products__card {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        background-color: var(--white);
+        padding: 0.6rem;
+        border-radius: 0.75rem;
+        box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .card__header__badge {
+        display: inline-flex;
+        background-color: var(--red);
+        border-radius: 0.5rem;
+        padding: 0.4rem 0.8rem;
+        color: var(--white);
+        font-size: 0.9rem;
+    }
+
+    .card__header__image {
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .card__content__rating {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        margin: 0.5rem 0 0 0;
+    }
+
+    .card__content__rating__stars {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .card__content__rating__stars .star img {
+        width: 1.1rem;
+        height: auto;
+        display: block;
+    }
+
+    .rating__stats__tear {
+        font-weight: 700;
+        font-size: 0.8rem;
+        padding-left: 0.4rem;
+    }
+
+    .rating__stats__count {
+        padding-left: 0.5rem;
+        font-size: 0.8rem;
+        color: var(--grey);
+    }
 }
