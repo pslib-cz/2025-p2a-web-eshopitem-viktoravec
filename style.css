@@ -22,7 +22,7 @@
 
 @layer components {
     .header {
-        padding: 3em 2em;
+        padding: 2em 1em 2.5em 1em;
     }
 
     .header__path {
@@ -84,7 +84,6 @@
         vertical-align: middle;
     }
 
-
     .main__products {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -102,7 +101,6 @@
         border-radius: 0.75rem;
         box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
     }
-
 
     .card__header__badge {
         display: inline-flex;
