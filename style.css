@@ -1,3 +1,56 @@
-h1 {
-    color: blue;
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.header {
+    padding: 3em 2em;
+}
+
+.header__path {
+    display: block;
+    color: rgb(139, 139, 139);
+}
+
+.header__path__item {
+    color: rgb(139, 139, 139);
+    font-size: 1rem;
+}
+
+.header__path__item:last-child {
+    text-decoration: none;
+}
+
+.header__material {
+    margin: 1em 0 0 0;
+    font-size: 1.5rem;
+    font-weight: 550;
+}
+
+/*.header__filters {
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    background-color: #7EE24D;
+    padding: 1em 4em;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 750;
+}*/
+
+.header__filters__title {
+    text-align: center;
+    background-color: #7EE24D;
+    padding: 1em 4em;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 750;
+}
+
+.header__filters__arrow {
+    display: inline-flex;
+    padding-left: 0.5em;
+    width: 0.75rem;
+    height: 0.75rem;
+    vertical-align: middle;
 }
