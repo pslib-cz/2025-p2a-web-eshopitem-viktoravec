@@ -7,6 +7,8 @@
         --darkGreen: #6ebe46;
         --white: #ffff;
         --red: #dc3545;
+        --black: #000000;
+        --stock: #008201;
     }
 }
 
@@ -64,6 +66,7 @@
     .header__filters {
         display: flex;
         justify-self: center;
+        justify-content: center;
         text-align: center;
         background-color: var(--green);
         padding: 0 5rem;
@@ -151,4 +154,46 @@
         font-size: 0.8rem;
         color: var(--grey);
     }
+
+    .info__title {
+        font-size: 1rem;
+        font-weight: 550;
+        text-decoration: none;
+        color: var(--black);
+        margin: 0;
+        padding-top: 0.9rem;
+    }
+
+    .info__title__content {
+        font-size: 1rem;
+        font-weight: 550;
+        text-decoration: none;
+        color: var(--black);
+    }
+
+    .info__stock {
+        color: var(--stock);
+        font-size: 0.9rem;
+        margin: 0;
+        padding-top: 0.5rem;
+    }
+    .info__price {
+        display: flex;
+        justify-content: flex-start;
+        gap: 0.5rem;
+    }
+
+    .info__price__active {
+        font-size: 1rem;
+    }
+
+    .info__price__legacy {
+        color: var(--red);
+        font-weight: 600;
+        font-size: 1rem;
+        text-decoration: line-through;
+    }
 }
+
+
+
