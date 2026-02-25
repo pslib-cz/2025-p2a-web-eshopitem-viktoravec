@@ -78,7 +78,7 @@
     }
 
     .header__filters__arrow {
-        padding-left: 0.5em;
+        padding-left: 0.75em;
         width: 0.75rem;
         height: 0.75rem;
         vertical-align: middle;
@@ -111,8 +111,12 @@
         font-size: 0.9rem;
     }
 
+    .card__header__placeholder {
+        margin-top: 0.5rem;
+    }
+
     .card__header__image {
-        margin-top: 1rem;
+        display: block;
         width: 100%;
     }
 
