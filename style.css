@@ -70,8 +70,9 @@
         justify-self: center;
         justify-content: center;
         text-align: center;
+        flex-grow: 2;
         background-color: var(--green);
-        padding: 0 5rem;
+        padding: 1rem 5rem;
         border-radius: 0.5rem;
         font-size: 1rem;
         font-weight: 750;
@@ -92,6 +93,7 @@
     .main__products {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto 1fr auto;
         gap: 0.6rem;
         padding: 1rem;
         grid-template-rows: auto;
@@ -99,8 +101,8 @@
 
     .main__products__card {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        grid-template-rows: subgrid;
+        grid-row: span 4;
         background-color: var(--white);
         padding: 0.6rem;
         border-radius: 0.75rem;
@@ -137,7 +139,6 @@
         display: flex;
         align-items: center;
         justify-content: left;
-        margin: 0.5rem 0 0 0;
     }
 
     .card__rating__stars {
@@ -171,7 +172,6 @@
         text-decoration: none;
         color: var(--black);
         margin: 0;
-        padding-top: 0.9rem;
     }
 
     .info__title__content {
@@ -206,7 +206,8 @@
     .info__price {
         display: flex;
         justify-content: flex-start;
-        gap: 0.6rem;
+        gap: 0.5rem;
+        margin: 0.8rem 0 0 0;
     }
 
     .info__price__active {
@@ -381,9 +382,5 @@
         text-decoration: underline;
     }
 }
-
-
-
-
 
 
